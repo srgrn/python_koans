@@ -21,7 +21,6 @@ IF EXIST "python.exe" (
 
 IF NOT "" == "%SCRIPT%" (
   %SCRIPT%
-  pause
 ) ELSE (
   echo.
   echo Python.exe is not in the path!
