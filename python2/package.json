@@ -1,0 +1,23 @@
+{
+  "name": "learnPython",
+  "version": "0.0.0",
+  "description": "just for grunt",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/srgrn/python_koans.git"
+  },
+  "author": "",
+  "license": "BSD",
+  "bugs": {
+    "url": "https://github.com/srgrn/python_koans/issues"
+  },
+  "devDependencies": {
+    "grunt-contrib-watch": "~0.5.3",
+    "grunt": "~0.4.2",
+    "grunt-contrib-commands": "~0.1.6"
+  }
+}
