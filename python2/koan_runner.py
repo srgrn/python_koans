@@ -14,12 +14,10 @@ class koanHandler(PatternMatchingEventHandler):
   patterns = ["*.py"]
 
   def process(self,event):
-    Mountain().walk_the_path(sys.argv)
-
+    print event.src_path
+    Mountain().walk_the_path()
+    
   def on_modified(self,event):
-    self.process(event)
-
-  def on_created(self,event):
     self.process(event)
 
 if __name__ == '__main__':
@@ -33,5 +31,4 @@ if __name__ == '__main__':
       time.sleep(1)
   except KeyboardInterrupt:
       observer.stop()
-
   observer.join()
