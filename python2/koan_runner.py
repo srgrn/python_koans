@@ -21,6 +21,7 @@ if __name__ == '__main__':
   args = sys.argv[1:]
   observer = Observer()
   observer.schedule(koanHandler(), path=args[0] if args else '.',recursive=True)
+  os.system("python contemplate_koans.py")
   observer.start()
   try:
     while True:

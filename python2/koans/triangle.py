@@ -19,7 +19,21 @@
 #
 def triangle(a, b, c):
     # DELETE 'PASS' AND WRITE THIS CODE
-    pass
+    if a<0 or b<0 or c<0:
+    	raise TriangleError
+    trick = set([a,b,c])
+    if 0 in trick:
+    	raise TriangleError
+    if len(trick) == 1:
+    	return 'equilateral'
+    if a+b>c and b+c>a and a+c>b:
+    	if len(trick) == 2:
+    		return 'isosceles'
+    	if len(trick) == 3:
+    		return 'scalene'
+
+    raise TriangleError
+
 
 
 # Error class used in part 2.  No need to change this code.
