@@ -1,13 +1,10 @@
+import os
 import sys
 import time  
 from watchdog.observers import Observer  
 from watchdog.events import PatternMatchingEventHandler  
 
 import unittest
-from runner.mountain import Mountain
-
-        
-
 
 class koanHandler(PatternMatchingEventHandler):
   """A simple pattern event for .py files"""
@@ -15,8 +12,7 @@ class koanHandler(PatternMatchingEventHandler):
 
   def process(self,event):
     print event.src_path
-    Mountain().walk_the_path()
-    
+    os.system("python contemplate_koans.py")
   def on_modified(self,event):
     self.process(event)
 
